@@ -3,12 +3,12 @@ import java.util.Scanner;
 
 public class EvenNumbers {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Введите число N: ");
+            int n = scanner.nextInt();
 
-        System.out.print("Введите число N: ");
-        int n = scanner.nextInt();
-
-        System.out.println(printEvenNumbersToString(n));
+            System.out.println(printEvenNumbersToString(n));
+        }
     }
 
     static String printEvenNumbersToString(int n) {

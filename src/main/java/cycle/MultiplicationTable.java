@@ -5,12 +5,12 @@ import java.util.Scanner;
 
 public class MultiplicationTable {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Введите число N: ");
+            int n = scanner.nextInt();
 
-        System.out.print("Введите число N: ");
-        int n = scanner.nextInt();
-
-        System.out.println(printMultiplicationTable(n));
+            System.out.println(printMultiplicationTable(n));
+        }
     }
 
     static List<String> printMultiplicationTable(int n) {

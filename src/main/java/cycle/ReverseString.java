@@ -4,20 +4,19 @@ import java.util.Scanner;
 
 public class ReverseString {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+        try (Scanner scanner = new Scanner(System.in)) {
+            System.out.print("Введите строку: ");
+            String text = scanner.nextLine();
 
-        System.out.print("Введите строку: ");
-        String input = scanner.nextLine();
-
-        String reversed = reverse(input);
-        System.out.println("Обратная строка: " + reversed);
+            System.out.println(reverseString(text));
+        }
     }
 
-    static String reverse(String str) {
-        //TODO: Палиндром (обратная строка)
-        // Напишите программу, которая принимает строку и выводит ее
-        // в обратном порядке с использованием цикла.
-
-        return "";
+    static String reverseString(String text) {
+        String result = "";
+        //TODO: Переверните строку
+        // Напишите программу, которая переворачивает строку
+        // Для пустой строки верните "Empty string"
+        return result;
     }
 }
